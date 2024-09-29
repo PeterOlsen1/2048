@@ -1,5 +1,8 @@
 <script>
-    export let text = "hello";
+    export let value;
+    export let row;
+    export let col;
+    export let id;
 </script>
 
 <style>
@@ -18,10 +21,16 @@
         display: flex;
         justify-content: center;
         font-size: 18pt;
-        
+/*         
+        transition: grid-row 0.5s ease, grid-column 0.5s ease, grid-area 0.5s ease;
+        transition: transform 0.1s ease-in-out; */
+        transition: all 0.1s ease-in-out;
+        position: relative;
+        left: 0;
+        top: 0;
     }
 </style>
 
-<div class="box">
-    <p>{text}</p>
+<div class="box" style="grid-row: {row + 1}; grid-column: {col + 1}" id="{id}">
+    <p>{value}</p>
 </div>

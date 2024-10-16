@@ -3,6 +3,8 @@
     export let row;
     export let col;
     export let id;
+
+    $: display = value;
 </script>
 
 <style>
@@ -32,5 +34,5 @@
 </style>
 
 <div class="box" style="grid-row: {row + 1}; grid-column: {col + 1}" id="{id}">
-    <p>{value}</p>
+    <p>{display}</p>
 </div>

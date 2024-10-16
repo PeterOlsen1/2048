@@ -21,7 +21,7 @@
 </style>
 
 <div class="board">
-    {#each state as row}
+    {#each $state as row}
         {#each row as box}
             {#if box}
                 <Box value={box.value} row={box.row} col={box.col} id='box-{box.id}' />
